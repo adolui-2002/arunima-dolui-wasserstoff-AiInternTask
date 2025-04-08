@@ -4,8 +4,8 @@ Web search service for gathering information.
 import requests
 from bs4 import BeautifulSoup
 
-SEARCH_API_KEY="AIzaSyDcMSxdGWsv2LqMq9W0PADTotvzXKn1p5g"
-SEARCH_ENGINE_ID="d6eb4b063ed80437b"
+SEARCH_API_KEY="Your_api_key"
+SEARCH_ENGINE_ID="Your_search_engine_id"
 class WebSearchService:
     def __init__(self):
         self.api_key = SEARCH_API_KEY
