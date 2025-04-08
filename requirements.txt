@@ -1,0 +1,51 @@
+# Core Libraries
+fastapi
+uvicorn
+pydantic
+
+
+# Machine Learning and NLP
+
+sentencepiece
+scikit-learn
+nltk
+transformers
+torch
+
+# Google API Integration
+google-api-python-client
+google-auth
+google-auth-oauthlib
+
+# Database
+SQLAlchemy
+psycopg2-binary
+sqlalchemy
+
+# Email Parsing and Validation
+email-validator
+email-reply-parser
+
+# Web Scraping
+beautifulsoup4
+requests
+
+# Scheduling
+schedule
+
+# Logging and Monitoring
+prometheus-client
+
+# Utilities
+python-dotenv
+tqdm
+
+#  DeepSeek R1 (if used)
+streamlit
+langchain_ollama
+langchain_core
+langchain_community
+faiss-cpu
+
+
+
