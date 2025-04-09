@@ -29,53 +29,6 @@ The project uses `rag_setup` for Retrieval-Augmented Generation (RAG) tasks, whi
 ### Draft Email Replies:
 - Automatically draft polite and professional email responses based on the email content.
 
-## System Architecture
-
-### Components
-
-#### Database:
-- Stores email data, including sender, recipient, subject, body, and metadata.
-- SQLAlchemy is used for ORM (Object-Relational Mapping).
-
-#### RAG Integration:
-- The `rag_setup` module is used for Retrieval-Augmented Generation tasks.
-- It retrieves relevant context from a vector store and generates responses using a language model.
-
-#### Google Calendar API:
-- Used for scheduling meetings and checking time slot availability.
-
-#### Streamlit:
-- Provides a user-friendly interface for interacting with the assistant.
-
-#### Web Search Service:
-- Searches the web for additional context or answers to questions.
-
-### Workflow
-
-#### Email Fetching:
-- Emails are fetched from a source (e.g., Gmail API) and stored in the database.
-- Each email is assigned a unique ID for processing.
-
-#### Email Processing:
-- The email body is analyzed using the `rag_setup` module to extract:
-  - Summary or agenda.
-  - Questions asked in the email.
-  - Meeting details (e.g., time, location, attendees).
-- The system determines if a reply is needed or if an action is required.
-
-#### Meeting Scheduling:
-- If meeting details are found, the system schedules the meeting in Google Calendar.
-- Missing details (e.g., end time) are handled with default values.
-
-#### Chatbot Interaction:
-- Users can interact with the assistant via a chat interface.
-- The chatbot uses the `chatbot_interaction` function from `rag_setup` to generate responses.
-
-#### Web Search:
-- If questions are found in the email, the system performs a web search to find answers.
-
-#### Drafting Replies:
-- If a reply is needed, the system drafts a professional response using the `rag_setup` module.
 
 ## Major Components
 
@@ -148,7 +101,7 @@ The `Email` model defines the schema for storing email data:
 
 ### 2. Rate Limits
 #### Challenge:
-- API rate limits for Hugging Face or Google Calendar.
+- API rate limits for Google web search or Google Calendar.
 
 #### Solution:
 - Implement retry logic with exponential backoff for API calls.
@@ -185,8 +138,3 @@ The `Email` model defines the schema for storing email data:
 - **Dateutil**: Used for parsing date and time strings.
 - **Pytz**: Handles timezone conversions.
 
-## Assumptions
-
-- **Email Content**: Emails contain sufficient information for processing (e.g., meeting details, questions).
-- **RAG Accuracy**: The RAG chain provides accurate and relevant responses.
-- **API Availability**: External APIs (e.g., Google Calendar, LangChain) are available and responsive.
