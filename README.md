@@ -138,3 +138,61 @@ The `Email` model defines the schema for storing email data:
 - **Dateutil**: Used for parsing date and time strings.
 - **Pytz**: Handles timezone conversions.
 
+
+## Getting Started
+
+### Prerequisites
+- Python 3.11 or higher
+- A Google API key
+- A Google searcg ID
+- A Slack BOT Token
+- A Email address
+- A Email Password
+
+### Installation
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/adolui-2002/arunima-dolui-wasserstoff-AiInternTask.git
+    cd email_assistant
+    ```
+
+2. Create a virtual environment and activate it:
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+3. Install the required packages:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. Set up environment variables:
+    - Create a `.env` file in the root directory with the following content:
+      ```env
+      GOOGLE_API_KEY = your_google_api_key
+      GOOGLE_SEARCH_ID = your_google_sear_id
+      SLACK_BOT_TOKEN = your_slack_bot_token
+      EMAIL_ADDRESS= your_email_address
+      EMAIL_PASSWORD= your_email_password
+      
+      ```
+
+### Running the Application
+1. Start the Streamlit application:
+    ```sh
+    streamlit run streamlit_app.py
+    ```
+
+2. Open your web browser and navigate to `http://localhost:8501` to interact with the chatbot.
+
+
+
+## Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+
