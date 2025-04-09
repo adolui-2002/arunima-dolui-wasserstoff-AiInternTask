@@ -176,6 +176,8 @@ The `Email` model defines the schema for storing email data:
 
 ## Tools and Libraries
 
+- **Ollama**: Runs and manages local LLMs efficiently, enabling offline inference for the project.
+- **DeepSeekR1**: Serves as the main language model for understanding and generating natural language responses.
 - **LangChain**: Used for RAG (Retrieval-Augmented Generation) tasks.
 - **Google Calendar API**: Used for scheduling meetings and checking time slot availability.
 - **SQLAlchemy**: ORM for managing the database.
